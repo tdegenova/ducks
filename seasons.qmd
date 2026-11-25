@@ -1,0 +1,31 @@
+---
+title: "Seasons"
+---
+
+```{r}
+#| message: false
+library(tidyverse)
+library(ggridges)
+```
+
+```{r}
+mallards <- read_rds("data/mallards.rds")
+```
+
+```{r}
+mallards |>
+  filter(speed <= 30) |>
+  mutate(month = fct_reorder(month, month_num)) |>
+  ggplot(aes(x = speed, y = month, fill = after_stat(x))) +
+  geom_density_ridges_gradient(scale = 3, rel_min_height = 0.01) +
+  scale_fill_viridis_c(option = "turbo") +
+  labs(
+    title    = "Most ducks are barely moving — but summer has the most active fliers",
+    subtitle = "Distribution of GPS-recorded ground speeds by month (speed ≤ 30 m/s)",
+    x        = "Ground speed (m/s)",
+    y        = NULL,
+    fill     = "Speed",
+    caption  = "Source: Korner, Sauter, Fiedler & Jenni (2016) via Movebank (CC BY)"
+  ) +
+  theme_minimal()
+```

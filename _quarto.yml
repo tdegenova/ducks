@@ -9,6 +9,8 @@ website:
         text: Home
       - href: map.qmd
         text: Map
+      - href: seasons.qmd
+        text: Seasons
 
 format:
   html:
