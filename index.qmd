@@ -2,6 +2,8 @@
 title: "Mallard Duck Movement"
 ---
 
-This is a Quarto website.
+## Welcome
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Mallards (*Anas platyrhynchos*) are the most familiar duck in the world, the green-headed bird found on park ponds across the Northern Hemisphere. Between 2007 and 2017, researchers fitted 52 of them with GPS collars at Lake Constance, one of the largest freshwater lakes in Central Europe, on the border of Germany, Switzerland, and Austria. The data is archived on [Movebank](https://movebank.org/).
+
+The **[Map](map.qmd)** page shows where the ducks went: most fixes cluster around the lake, but a few birds traveled several hundred kilometers to the northeast. The **[Seasons](seasons.qmd)** page shows when they moved: most fixes catch a resting bird, and flight activity peaks in July and August, after the breeding season.
